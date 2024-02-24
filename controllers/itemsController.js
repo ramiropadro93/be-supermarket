@@ -14,7 +14,7 @@ const createItem = async (req, res) => {
 const getItems = async (req, res) => {
   try {
     console.log('hola mundo entre a getItems')
-    const result = await pool.query('SELECT * FROM items');
+    // const result = await pool.query('SELECT * FROM items');
     res.status(200).json('hola:','hola mundo');
   } catch (error) {
     res.status(500).json({ error: error.message });
