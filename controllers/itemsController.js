@@ -13,6 +13,7 @@ const createItem = async (req, res) => {
 
 const getItems = async (req, res) => {
   try {
+    console.log('hola mundo entre a getItems')
     const result = await pool.query('SELECT * FROM items');
     res.status(200).json(result.rows);
   } catch (error) {
