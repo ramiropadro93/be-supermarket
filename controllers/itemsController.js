@@ -1,4 +1,4 @@
-const pool = require('../db/db'); 
+// const pool = require('../db/db'); 
 
 const createItem = async (req, res) => {
   const { name, unitPrice, stock } = req.body;
