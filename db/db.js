@@ -11,13 +11,13 @@ const { Pool } = require('pg');
 //   port: process.env.DB_PORT,
 // });
 
-const pool = new Pool({
-  connectionString: process.env.POSTGRES_URL, // Tu cadena de conexión
-  ssl: {
-    rejectUnauthorized: true, // Esto verifica que el certificado SSL del servidor sea válido
-    sslmode: 'require' // Asegúrate de que la conexión use SSL
-  }
-});
+// const pool = new Pool({
+//   connectionString: process.env.POSTGRES_URL, // Tu cadena de conexión
+//   ssl: {
+//     rejectUnauthorized: true, // Esto verifica que el certificado SSL del servidor sea válido
+//     sslmode: 'require' // Asegúrate de que la conexión use SSL
+//   }
+// });
 
 pool.connect((err, client, release) => {
   if (err) {
