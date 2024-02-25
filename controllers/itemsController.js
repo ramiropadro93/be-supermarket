@@ -1,4 +1,4 @@
-// const pool = require('../db/db'); 
+const pool = require('../db/db'); 
 
 const createItem = async (req, res) => {
   const { name, unitPrice, stock } = req.body;
@@ -15,9 +15,8 @@ const createItem = async (req, res) => {
 
 const getItems = async (req, res) => {
   try {
-    // const result = await pool.query('SELECT * FROM items');
-    // res.status(200).json(result.rows);
-    res.status(200).json({hola: 'mundo'});
+    const result = await pool.query('SELECT * FROM items');
+    res.status(200).json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
